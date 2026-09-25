@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f4f6f8" />
+  <title>Telecomax Operations Portal</title>
+  <style>
+    :root{
+      --bg:#f4f6f8; --card:#ffffff; --text:#20242a; --muted:#6d747d;
+      --line:#e2e6ea; --brand:#c52b83; --brand-dark:#9f1f69;
+      --shadow:0 12px 32px rgba(26,34,44,.08);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .topbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+    .topbar-inner{max-width:1180px;margin:auto;padding:18px 24px;display:flex;align-items:center;gap:14px}
+    .mark{width:8px;height:38px;border-radius:99px;background:var(--brand)}
+    .brand strong{display:block;font-size:22px;letter-spacing:.4px}
+    .brand span{font-size:13px;color:var(--muted)}
+    main{max-width:1180px;margin:auto;padding:54px 24px 70px}
+    .hero{text-align:center;max-width:760px;margin:0 auto 40px}
+    .hero .eyebrow{color:var(--brand);font-weight:800;letter-spacing:.12em;font-size:12px}
+    .hero h1{font-size:clamp(32px,5vw,52px);margin:10px 0 12px;line-height:1.06}
+    .hero p{color:var(--muted);font-size:17px;line-height:1.6;margin:0}
+    .systems{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    .system{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:var(--shadow)}
+    .system-head{display:flex;gap:15px;align-items:center;margin-bottom:22px}
+    .icon{width:54px;height:54px;border-radius:16px;background:#fbeaf4;display:grid;place-items:center;font-size:25px}
+    h2{font-size:22px;margin:0 0 4px}.sub{color:var(--muted);font-size:14px}
+    .links{display:grid;gap:12px}
+    a.app{display:flex;align-items:center;justify-content:space-between;gap:18px;text-decoration:none;color:var(--text);padding:16px 17px;border:1px solid var(--line);border-radius:15px;background:#fafbfc;transition:.18s ease}
+    a.app:hover{transform:translateY(-2px);border-color:#e7b0d0;background:#fff;box-shadow:0 8px 22px rgba(197,43,131,.10)}
+    .app-title{font-weight:750;margin-bottom:3px}.app-desc{font-size:13px;color:var(--muted)}
+    .arrow{color:var(--brand);font-size:22px;font-weight:900}
+    .note{margin-top:30px;text-align:center;color:var(--muted);font-size:13px}
+    footer{text-align:center;color:#9299a1;font-size:12px;padding:0 24px 32px}
+    @media(max-width:760px){
+      main{padding-top:36px}.systems{grid-template-columns:1fr}.system{padding:20px}
+      .topbar-inner{padding:14px 18px}.hero{margin-bottom:28px}
+    }
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="mark"></div>
+    <div class="brand"><strong>TELECOMAX</strong><span>Operations Management Portal</span></div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">INTERNAL OPERATIONS</div>
+    <h1>One portal for Telecomax applications</h1>
+    <p>Access KM & Benzine and Custody systems from one central workspace.</p>
+  </section>
+
+  <section class="systems">
+    <article class="system">
+      <div class="system-head">
+        <div class="icon">🚗</div>
+        <div><h2>KM & Benzine Management</h2><div class="sub">Trips, KM calculations, Benzine and Finance audit</div></div>
+      </div>
+      <div class="links">
+        <a class="app" href="https://telecomaxkm.vercel.app" target="_blank" rel="noopener">
+          <div><div class="app-title">KM Tracker</div><div class="app-desc">Engineer trip and Benzine management</div></div><div class="arrow">→</div>
+        </a>
+        <a class="app" href="https://telecomaxkm.vercel.app/finance.html" target="_blank" rel="noopener">
+          <div><div class="app-title">Finance KM Audit</div><div class="app-desc">Desktop photo and KM audit portal</div></div><div class="arrow">→</div>
+        </a>
+      </div>
+    </article>
+
+    <article class="system">
+      <div class="system-head">
+        <div class="icon">💼</div>
+        <div><h2>Custody Management</h2><div class="sub">Engineer custody, Project Management and Finance</div></div>
+      </div>
+      <div class="links">
+        <a class="app" href="https://custody-orcin.vercel.app" target="_blank" rel="noopener">
+          <div><div class="app-title">Engineer Custody</div><div class="app-desc">Engineer custody and expense application</div></div><div class="arrow">→</div>
+        </a>
+        <a class="app" href="https://custody-orcin.vercel.app/pm.html" target="_blank" rel="noopener">
+          <div><div class="app-title">Project Manager</div><div class="app-desc">PM custody management portal</div></div><div class="arrow">→</div>
+        </a>
+        <a class="app" href="https://custody-orcin.vercel.app/finance.html" target="_blank" rel="noopener">
+          <div><div class="app-title">Custody Finance</div><div class="app-desc">Finance custody review and management</div></div><div class="arrow">→</div>
+        </a>
+      </div>
+    </article>
+  </section>
+
+  <div class="note">Each application remains independently deployed and can be updated without affecting this portal.</div>
+</main>
+<footer>Telecomax Managed Services · Operations Portal</footer>
+</body>
+</html>
