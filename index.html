@@ -23,7 +23,7 @@
     .hero .eyebrow{color:var(--brand);font-weight:800;letter-spacing:.12em;font-size:12px}
     .hero h1{font-size:clamp(32px,5vw,52px);margin:10px 0 12px;line-height:1.06}
     .hero p{color:var(--muted);font-size:17px;line-height:1.6;margin:0}
-    .systems{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    .systems{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
     .system{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:var(--shadow)}
     .system-head{display:flex;gap:15px;align-items:center;margin-bottom:22px}
     .icon{width:54px;height:54px;border-radius:16px;background:#fbeaf4;display:grid;place-items:center;font-size:25px}
@@ -39,7 +39,10 @@
       main{padding-top:36px}.systems{grid-template-columns:1fr}.system{padding:20px}
       .topbar-inner{padding:14px 18px}.hero{margin-bottom:28px}
     }
-  </style>
+  
+@media(max-width:1000px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <header class="topbar">
@@ -49,53 +52,70 @@
   </div>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="eyebrow">INTERNAL OPERATIONS</div>
-    <h1>Telecomax Portal</h1>
-    <p>Access KM & Benzine and Custody systems from one central workspace.</p>
-  </section>
 
-  <section class="systems">
-    <article class="system">
-      <div class="system-head">
-        <div class="icon">🚗</div>
-        <div><h2>KM & Benzine Management</h2><div class="sub">Trips, KM calculations, Benzine and Finance audit</div></div>
-      </div>
-      <div class="links">
-        <a class="app" href="https://telecomaxkm.vercel.app" target="_blank" rel="noopener">
-          <div><div class="app-title">KM Tracker</div><div class="app-desc">Engineer trip and Benzine management</div></div><div class="arrow">→</div>
-        </a>
-        <a class="app" href="https://telecomaxkm.vercel.app/finance.html" target="_blank" rel="noopener">
-          <div><div class="app-title">Finance KM Audit</div><div class="app-desc">Desktop photo and KM audit portal</div></div><div class="arrow">→</div>
-        </a>
-        <a class="app" href="https://telecomaxkm.vercel.app/admin.html" target="_blank" rel="noopener">
-          <div><div class="app-title">KM Admin Portal</div><div class="app-desc">Balances, Photo Audit, Solfa and Rent management</div></div><div class="arrow">→</div>
-        </a>
-      </div>
-    </article>
+  <main class="wrap">
+    <section class="grid">
 
-    <article class="system">
-      <div class="system-head">
-        <div class="icon">💼</div>
-        <div><h2>Custody Management</h2><div class="sub">Engineer custody, Project Management and Finance</div></div>
-      </div>
-      <div class="links">
-        <a class="app" href="https://custody-orcin.vercel.app" target="_blank" rel="noopener">
-          <div><div class="app-title">Engineer Custody</div><div class="app-desc">Engineer custody and expense application</div></div><div class="arrow">→</div>
-        </a>
-        <a class="app" href="https://custody-orcin.vercel.app/pm.html" target="_blank" rel="noopener">
-          <div><div class="app-title">Project Manager</div><div class="app-desc">PM custody management portal</div></div><div class="arrow">→</div>
-        </a>
-        <a class="app" href="https://custody-orcin.vercel.app/finance.html" target="_blank" rel="noopener">
-          <div><div class="app-title">Custody Finance</div><div class="app-desc">Finance custody review and management</div></div><div class="arrow">→</div>
-        </a>
-      </div>
-    </article>
-  </section>
+      <article class="card">
+        <div class="card-head">
+          <div class="icon">👷</div>
+          <div>
+            <h2>Engineers</h2>
+            <p>Engineer operational applications</p>
+          </div>
+        </div>
+        <div class="apps">
+          <a class="app" href="https://telecomaxkm.vercel.app/" target="_blank" rel="noopener">
+            <div><div class="app-title">KM & Benzine</div><div class="app-desc">Trips, odometers and benzine calculations</div></div><div class="arrow">→</div>
+          </a>
+          <a class="app" href="https://custody-orcin.vercel.app/" target="_blank" rel="noopener">
+            <div><div class="app-title">Custody</div><div class="app-desc">Engineer custody and expense management</div></div><div class="arrow">→</div>
+          </a>
+        </div>
+      </article>
 
-  
-</main>
+      <article class="card">
+        <div class="card-head">
+          <div class="icon">📋</div>
+          <div>
+            <h2>Project Management</h2>
+            <p>PM administration and audit tools</p>
+          </div>
+        </div>
+        <div class="apps">
+          <a class="app" href="https://telecomaxkm.vercel.app/admin.html" target="_blank" rel="noopener">
+            <div><div class="app-title">KM Admin Portal</div><div class="app-desc">Balances, Photo Audit, Solfa and Rent</div></div><div class="arrow">→</div>
+          </a>
+          <a class="app" href="https://telecomaxkm.vercel.app/allowances.html" target="_blank" rel="noopener">
+            <div><div class="app-title">Allowance Audit</div><div class="app-desc">Engineer and Driver allowance review</div></div><div class="arrow">→</div>
+          </a>
+          <a class="app" href="https://custody-orcin.vercel.app/pm.html" target="_blank" rel="noopener">
+            <div><div class="app-title">Custody PM Portal</div><div class="app-desc">Project Manager custody review</div></div><div class="arrow">→</div>
+          </a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="icon">💼</div>
+          <div>
+            <h2>Finance</h2>
+            <p>Finance audit and review applications</p>
+          </div>
+        </div>
+        <div class="apps">
+          <a class="app" href="https://telecomaxkm.vercel.app/finance.html" target="_blank" rel="noopener">
+            <div><div class="app-title">KM Finance Audit</div><div class="app-desc">Desktop KM and photo audit portal</div></div><div class="arrow">→</div>
+          </a>
+          <a class="app" href="https://custody-orcin.vercel.app/finance.html" target="_blank" rel="noopener">
+            <div><div class="app-title">Custody Finance</div><div class="app-desc">Custody finance review and audit</div></div><div class="arrow">→</div>
+          </a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
 <footer>Telecomax Managed Services · Operations Portal</footer>
 </body>
 </html>
